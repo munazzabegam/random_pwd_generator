@@ -19,11 +19,9 @@ def generate_password_clicked():
     except ValueError:
         messagebox.showerror("Error", "Invalid input for password length.")
 
-# Create main window
 root = tk.Tk()
 root.title("Password Generator")
 
-# Create widgets
 length_label = ttk.Label(root, text="Enter the length of the password:")
 length_entry = ttk.Entry(root, width=10)
 special_chars_var = tk.BooleanVar()
@@ -32,7 +30,6 @@ generate_button = ttk.Button(root, text="Generate Password", command=generate_pa
 password_label = ttk.Label(root, text="Your generated password:")
 password_entry = ttk.Entry(root, width=30, state="readonly")
 
-# Layout widgets using grid geometry manager
 length_label.grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
 length_entry.grid(row=0, column=1, padx=5, pady=5)
 special_chars_checkbox.grid(row=1, column=0, columnspan=2, padx=5, pady=5, sticky=tk.W)
@@ -40,5 +37,4 @@ generate_button.grid(row=2, column=0, columnspan=2, padx=5, pady=10)
 password_label.grid(row=3, column=0, padx=5, pady=5, sticky=tk.W)
 password_entry.grid(row=3, column=1, padx=5, pady=5)
 
-# Run the main event loop
 root.mainloop()
