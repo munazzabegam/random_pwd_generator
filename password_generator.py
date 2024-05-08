@@ -18,17 +18,3 @@ def generate_password(length=12, use_special_chars=True):
                         password[replace_index + 1:])
     
     return password
-
-def main():
-    length = int(input("Enter the length of the password: "))
-    use_special_chars = input("Do you want to include special characters? (y/n): ").lower() == 'y'
-    
-    if length < 6:
-        print("Password length should be at least 6 characters.")
-        return
-    
-    password = generate_password(length, use_special_chars)
-    print("Your password is:", password)
-
-if __name__ == "__main__":
-    main()
